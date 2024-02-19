@@ -4,15 +4,15 @@ function f = newton_forward_difference(X, Y)
     f(x) = Y(1);
     n = length(Y);
     res = zeros(n, n-1);
-    res = [X' Y' res];
-    
-    for i = 3: n+1
-        for j = i-1: n
-            res(j, i) = (res(j, i-1) - res(j-1, i-1)) / (res(j, 1) - res(j-i+2, 1));
+    res = [Y' res];
+
+    for j = 2: n
+        for i = j: n
+            res(i, j) = (res(i, j-1) - res(i-1, j-1)) / (X(i) - X(i-j+1));
         end
-        t(x) = res(i-1, i);
-        for j = 1: i-2
-            t(x) = t(x) * (x - X(j));
+        t(x) = res(j, j);
+        for i = 1: j-1
+            t(x) = t(x) * (x - X(i));
         end
         f(x) = f(x) + t(x);
     end
