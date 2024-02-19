@@ -40,7 +40,7 @@
       
   `returnValue` :
   - 0 : sucessful execution
-  - 1 : $\frac{df}{dx}|_{x} = 0$
+  - 1 : $\frac{df}{dx}|_{root} = 0$
   
 - ## Fixed Point Iteration
   solves $g(x) = x$
