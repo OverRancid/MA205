@@ -11,7 +11,7 @@ function f = newton_forward_difference(X, Y)
             res(j, i) = (res(j, i-1) - res(j-1, i-1)) / (res(j, 1) - res(j-i+2, 1));
         end
         t(x) = res(i-1, i);
-        for j = i-2: -1: 1
+        for j = 1: i-2
             t(x) = t(x) * (x - X(j));
         end
         f(x) = f(x) + t(x);
