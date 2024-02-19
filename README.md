@@ -30,15 +30,31 @@
 
 # Root Finding
 - ## Bisection
+  usage: ` [root, num_iterations] = bisection(f, a, b, tolerance, max_iterations)`
 - ## Secant
+    usage: ` [root, num_iterations] = secant(f, x0, x1, tolerance, max_iterations)`
   - ### Regular Falsi
+     usage: ` [root, num_iterations] = secant_regular_falsi(f, x0, x1, tolerance, max_iterations)`
 - ## Newton - Raphson
+    usage: ` [root, num_iterations, returnValue] = bisection(f, Df, x0, tolerance, max_iterations)`
+      
+  `returnValue` :
+  - 0 : sucessful execution
+  - 1 : $\frac{df}{dx}|_{x} = 0$
+  
 - ## Fixed Point Iteration
+  solves $g(x) = x$
+  
+  usage: ` [root, num_iterations] = fixed_point_itteration(g, x, tolerance, max_iterations)`
 
 # Interpolation & Extrapolation
 - ## Lagrange's Interpolation Formula
+  usage: `f = lagrange_interpolation(X, Y);`
+  
 - ## Newton's Divided Differences
   - ### Forward Differences
+    usage: `f = newton_forward_difference(X, Y);`
   - ### Backward Differences
+    usage: `f = newton_backward_difference(X, Y);`
   - ### Centeral Differences (pending)
 
