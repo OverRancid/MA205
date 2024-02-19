@@ -1,16 +1,15 @@
 function [x, n] = bisection(f, a, b, tolerance, max_itt)
     % Finds root of f(x) = 0 via bisection method
     for n = 1:max_itt
-        c = (a+b)/2;
-        if abs(f(c)) < tolerance
+        x = (a+b)/2;
+        if abs(f(x)) < tolerance
             break;
         end
 
-        if f(a)*f(c) < 0
-            b = c;
+        if f(a)*f(x) < 0
+            b = x;
         else
-            a = c;
+            a = x;
         end
     end
-    x = c;
 end
