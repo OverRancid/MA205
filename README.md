@@ -58,3 +58,5 @@
     usage: `f = newton_backward_difference(X, Y);`
   - ### Centeral Differences (pending)
 
+- ## Hermite Interpolation
+  usage: `f = hermite_interpolation(X, Y, dY);`
