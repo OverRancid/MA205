@@ -1,5 +1,5 @@
 function f = hermite_interpolation(X, Y, dY)
-    % generates a polynomial satisfying p(X) = Y and p'(X) = Y using Hermite interpolation
+    % generates a polynomial satisfying p(X) = Y and p'(X) = dY using Hermite interpolation
     syms f(x) l(x) A(x) B(x) Dl(x)
 
     n = length(X);
