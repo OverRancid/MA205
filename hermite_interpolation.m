@@ -19,5 +19,4 @@ function f = hermite_interpolation(X, Y, dY)
 
         f(x) = f(x) + A(x) * Y(i) + B(x) * dY(i);
     end
-
 end
