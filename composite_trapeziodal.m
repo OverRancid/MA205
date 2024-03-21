@@ -4,5 +4,6 @@ function I = composite_trapeziodal(f, a, b, n)
     x = a+h;
     while x < b
         I = I + h * f(x);
+        x = x + h;
     end
 end
