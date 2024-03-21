@@ -1,4 +1,5 @@
-function I = composite_simpson (f, a, b, n)
+function I = composite_simpson_onethird (f, a, b, n)
+    % finds the definite integral of f over [a, b] using n+1 points one-third's composite Simpson.
     h = (a+b)/n;
     I = h / 3 * (f(a) + f(b));
     for  i = 1: n/2

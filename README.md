@@ -45,7 +45,7 @@
 - ## Fixed Point Iteration
   solves $g(x) = x$
   
-  usage: ` [root, num_iterations] = fixed_point_itteration(g, x, tolerance, max_iterations)`
+  usage: `[root, num_iterations] = fixed_point_itteration(g, x, tolerance, max_iterations)`
 
 # Interpolation & Extrapolation
 - ## Lagrange's Interpolation Formula
@@ -60,3 +60,7 @@
 
 - ## Hermite Interpolation
   usage: `f = hermite_interpolation(X, Y, dY);`
+
+# Numerical Differentiation
+- ## Newton's Differentiation
+  usage: `Df = newton_differentiation(X, Y);`
