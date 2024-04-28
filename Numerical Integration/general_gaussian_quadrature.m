@@ -1,7 +1,7 @@
 function I = general_gaussian_quadrature (f, a, b, n)
     % finds the definite integral of f over [a, b] using n points gaussian quadrature
 
-    g = @(x) f(2*x/(b-a) - (a+b)/(b-a));    %shifting the integral to interval [-1, 1]
+    g = @(x) f((b-a)*x/2 + (a+b)/2);    %shifting the integral to interval [-1, 1]
     I = 0;  %initializing answer as 0
 
     x = zeros(1, n); % roots of Legendre polynomial
@@ -22,4 +22,5 @@ function I = general_gaussian_quadrature (f, a, b, n)
     for i = 1: n
         I = I + c(i) * g(x(i));
     end
+    I = I * (b-a)/2;
 end

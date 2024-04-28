@@ -1,6 +1,6 @@
 function I = gaussian_quadrature (f, a, b, n)
     % finds the definite integral of f over [a, b] using n points gaussian quadrature (specific to n=2, 3)
-    g = @(x) f(2*x/(b-a) - (a+b)/(b-a));
+    g = @(x) f((b-a)*x/2 + (a+b)/2);
     I = 0;
 
     if n == 2
@@ -14,4 +14,5 @@ function I = gaussian_quadrature (f, a, b, n)
     for i = 1: n
         I = I + c(i) * g(x(i));
     end
+    I = I * (b-a)/2;
 end
